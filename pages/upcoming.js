@@ -2,10 +2,10 @@ import Head from "next/head";
 import Main from "../components/Main";
 import Navbar from "../components/Navbar";
 import Sidebar from "../components/Sidebar";
+import { day, month, year } from "../constant";
 
-// 35bc86f4a53c49cfb6fac23a0a1126c6
-export default function Home() {
-  
+export default function upcoming() {
+
   return (
     <div>
       <Head>
@@ -18,7 +18,7 @@ export default function Home() {
       </Head>
       <Navbar />
       <Sidebar />
-      <Main />
+      <Main fetchDates={`${year}-${month}-${day},${year + 2}-${month}-${day}`} />
     </div>
   );
 }

@@ -1,0 +1,11 @@
+@tailwind components;
+
+@layer components {
+    .sidebarLink {
+        @apply flex items-center px-4 py-2 transition-colors duration-300 transform rounded-md text-gray-400 hover:bg-gray-700 hover:text-gray-200
+    }
+    .sidebarActiveLink {
+        @apply flex items-center px-4 py-2 transition-colors duration-300 transform rounded-md bg-gray-800 text-gray-200 cursor-not-allowed
+    }
+}
+/* text-gray-400 hover:bg-gray-700 hover:text-gray-200 */

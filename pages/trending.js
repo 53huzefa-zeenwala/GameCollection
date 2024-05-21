@@ -2,13 +2,12 @@ import Head from "next/head";
 import Main from "../components/Main";
 import Navbar from "../components/Navbar";
 import Sidebar from "../components/Sidebar";
+import { day, month, year } from "../constant";
 
-// 35bc86f4a53c49cfb6fac23a0a1126c6
-export default function Home() {
-  
+export default function trending() {
   return (
     <div>
-      <Head>
+        <Head>
         <title>Game Detail App</title>
         <meta
           name="description"
@@ -18,7 +17,8 @@ export default function Home() {
       </Head>
       <Navbar />
       <Sidebar />
-      <Main />
+      <Main fetchDates={`${year - 5}-${month}-${day},${year}-${month}-${day}`} />
+
     </div>
-  );
+  )
 }
